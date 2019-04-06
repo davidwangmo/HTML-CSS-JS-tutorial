@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel ="stylesheet" type="text/css" href="styleall.css"/>
+		<style type = "text/css">
+			h1{color:green;}
+			#third {border:1px solid green;
+				position:relative; /*relative is from original position, absolute is from 0px,0px*/
+				top:20px;
+				left:60px;}
+			#bottom {position:absolute;
+				top: 9999px}
+			#fixed{border:2px solid green;
+				position:fixed;
+				top:60px;
+				left:700px;}
+			img {max-height:200px;
+				max-width:200px;}
+		</style>
+	</head>
+	<body>
+		<h1>test for external style sheet</h1>
+		<p> this will apply the format for all pages with the link tag</p>
+		<a href="index.html">this is for first page</a><br/>
+		<a href="Second.html">this is for second page</a><br/>
+		<a href="indexjs.html">this is a link to javascript</a>
+		<p>first</p>
+		<p>second</p>
+		<p id="third">third</p>
+		<p>fourth</p>
+		<p id="bottom">bottom</p>
+		<p id="fixed">this is fixed</p>
+		<img src = "davidgreen.jpg">
+		<form> <!-- <form action="file" method="post"> this is for javascript,php, programming-->
+			Male:<input type = "radio" name ="sex" value="male"/>
+			Female:<input type = "radio" name ="sex" value="female"/>
+			<p>select from checkboxes</p>
+			choose1<input type = "checkbox" name ="test" value="1"/>
+			choose2<input type = "checkbox" name ="test" value="2"/>
+			choose3<input type = "checkbox" name ="test" value="3"/>
+			choose4<input type = "checkbox" name ="test" value="4"/>
+			<br/>
+			<select name="dropdown">
+				<option value = "dropdown"> choice one</option>
+				<option value = "dropdown"> choice two</option>
+				<option value = "dropdown"> choice three</option>
+				<option value = "dropdown"> choice four</option>
+				<option value = "dropdown"> choice five</option>
+			</select>
+			</br>
+			<textarea name="large paragraph" rows="8" cols="40">Type something here</textarea>
+			<br/>
+			<p>submit a file</p>
+			<input type ="file" name="Davidfiles"/> <br/>
+			<p>
+			Username: <input type="text" name = "username" size="20" maxlength="10" value="Enter Name Here"/>
+			<br/>
+			Password: <input type="password" name="pword"/ maxlength ="10">
+			</br>
+			<input type = "submit" value="Submit!">
+			</p>
+		</form>
+	</body>
+</html>

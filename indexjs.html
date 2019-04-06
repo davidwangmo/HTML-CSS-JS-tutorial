@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<script type="text/javascript">
+			//constructor usually for more objects
+			function person(name,age){
+				this.name = name;
+				this.age = age;
+				this.yearsUntilRetire = yearsLeft;
+			}
+			//methods
+			function yearsLeft(){
+			var numYears = 65-this.age;
+			return numYears;
+			}
+			var David = new person("David Wang", 17);
+			var bucky = new person("Bucky Roberts", 24);
+			
+			/*David = {name:"David Wang", age: 17};    Object initializer usually for few objects
+			bucky = {name:"Bucky Roberts", age: 24};*/
+		</script>
+	</head>
+	<body  onLoad="alert('your website has loaded');">
+		<a href = "index.html">Main Page</a>
+		<br/>
+		<a href = "Second.html">Second Page</a>
+		<br/>
+		<a href = "externalstylesheet.html">ExternalStyleSheet</a>
+		<script type="text/javascript">
+			var x = 23;
+			var me = "David";
+			document.write(me + x + "<br/>");
+			function popup(){
+				alert("Pop Up");
+			}
+			function name(a, b){
+				alert("My name is " + a + b);
+			}
+			name("David", "Wang");
+			name("First", "Last");
+			
+			function addNumbers(a, b){
+				var c =a+b;
+				return c;
+			}
+			document.write(addNumbers(2, 5));
+			//call function from another function
+			function callme(){
+				document.write(me)
+			}
+			function start(){
+				callme();
+			}
+			start();
+			//switchstatement
+			var switchstatement = "num1";
+			switch(switchstatement){
+				case "num1":
+					document.write("this is number 1<hr/>");
+					break;
+				case "num2":
+					document.write("this is number 2<hr/>");
+					break;
+				default:document.write("this is the default <hr/>");
+			}
+			for(x=0;x<10;x++)
+			{
+				document.write("for loop <br/>");
+			}
+			var x = 1;
+			while(x<10){
+				document.write(x+ "while loop <br/>");
+				x++;
+			}
+			var x = 19;
+			//do while allows for loop to run once before check
+			do{
+				document.write(x + "do while <br/>");
+				x++;
+			}while(x<10);
+			
+			document.write(bucky.name);
+			document.write(David.age);
+			document.write(David.yearsUntilRetire()+ "<br/>");
+			//array
+			var people = new Array("Bucky", "Tommy", "Sarah", "Hanah", "Mikety");
+			document.write(people[0]+ "<br/>");
+			var things = new Array(3);
+			things[0] = "Thing1"
+			things[1] = "Thing2"
+			things[2] = "Thing3"
+			document.write(things[2]+ "<br/>");
+			var stuff = new Array();
+			stuff[0] = "stuff1";
+			stuff[1] = "stuff2";
+			document.write(stuff[1]+ "<br/>");
+			var combinearrays = people.concat(things);
+			document.write(combinearrays[6]+ "<br/>");
+			var string1 = people.join("-");//combines array
+			document.write(string1 + "<br/>");
+			people.pop();//removes last element of array
+			people.reverse();//reverse order
+			people.push("David", "Wang");//adds element to end of array
+			people.sort();//sorts by alphabetical order
+			document.write(people + "<br/>");
+			//add array elements using a loop
+			var pie = prompt("Enter your name:", "");
+			document.write("Hello " + pie + "<br/>");
+			var print = new Array(arraynumber);
+			var arraynumber = prompt("Enter number of elements you want to add:", "");
+			for(i=0;i<arraynumber;i++){
+				print[i] = prompt("Add something to the Array:", "");
+			}
+			for(i=0;i<print.length;i++){
+				document.write(print[i] + "<br/>");
+			}
+			//associative array is for characters
+			var bucky = new Array();
+			bucky["color"] = "blue";
+			bucky["food"] = "hot pockets";
+			document.write("Bucky's favourite food is " + bucky["food"] + "<br/>");
+			//Math Object
+			document.write(Math.PI + "+" + Math.E + "<br/>");
+			alert("The square root of the number you entered is: " + Math.sqrt(prompt("Enter a number:","")))
+			//date object
+			function printTime(){
+				var now = new Date();
+				var hours = now.getHours();
+				var seconds = now.getSeconds();
+				var mins = now.getMinutes();
+				document.write(hours%12 + ":"+mins+":"+seconds+"<br/>");
+			}
+			printTime();
+			//setInterval("printTime()", 1000);
+		</script>
+		<form>
+			<input type="button" value="Click Me" onClick="popup()"> <br/>
+			<input type="button" value="Click Me" onClick="alert('alert1'); alert('alert2');"><br/>
+			<a href="https://google.com" onMouseOver="alert('hovered over')">Hover over!</a><br/><br/>
+			<a href="https://google.com" onMouseOut="alert('Come back')">Hover over this too!</a>
+		</form>
+
+	</body>
+</html>

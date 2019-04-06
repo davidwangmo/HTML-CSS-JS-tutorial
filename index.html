@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<style type="text/css">/*comment in CSS*/
+			.sec{font-weight:bold;
+				color:green;}/*class*/
+			#LH{font-style:italic;
+				color:orange;}/*ID*/
+			body{background-image:url(davidgreen.jpg);
+				background-repeat:no-repeat;
+				background-size:150px;
+				background-position:100% 0px}
+			p{color:#987654;
+				font-family:arial;
+				line-height:130%;
+				text-indent:25px;
+				margin:20px;}/*margin is outside border, padding is inside border*/
+			a:link{color:#red;
+				font-family:Times New Roman;}
+			p>a:visited{color:green}/*parent child styling*/
+			a:hover{background-color:blue;
+				color:white;
+				text-decoration:underline;
+				font-weight:bold;}
+			a:active{background-color:orange;}
+			h1 {color:black;
+				font-family:calibri;
+				text-align:center;}
+			#David{border:2px dashed red;
+				position:absolute;
+				width:300px;
+				top:30px;
+				left:35px;}
+			#Wang{border:2px dotted green;
+				position:absolute;
+				width:300px;
+				top:55px;
+				left:35px;}
+			.PE:first-letter{font-weight:bold;
+				font-size:30px;
+				font-color:green;}
+		</style>
+		<title> This is the title </title>
+	</head>
+	
+	<body>
+		<div id="David">my name is David</div>
+		<div id="Wang">my last name is Wang</div>
+		<h1>Main Header</h1>
+		<a name = "Top"></a>
+			<p>first paragraph</p>
+			<a href="#1">Number One</a><br/>
+			<a href="#2">Number Two</a><br/>
+			<a href="#3">Number Three</a><br/>
+			<a href="#4">Number Four</a>
+			<hr/><!--horizonal line-->
+			<hr/>
+		<h2>Second Header</h2>
+			<p>This is the second paragraph</p>
+			Line break<br/>Second part <br/>
+			<strong>bold</strong>
+			<em> italics</em>
+			<!-- comment -->
+			<p><a href="http://google.com" title="Awesome Search Engine">Google</a> <--Hover over for tool tip</p> 
+			<p><a href="Second.html">this is a link to the second page</a></p>
+			<p><a href="externalstylesheet.html">this is a link to external style sheet</a></p>
+			<p><a href="indexjs.html">this is a link to javascript</a></p>
+			<hr/>
+			
+		<h3>Jump Links</h3>
+			<p><a name = "1"></a>One
+			<br/>Line Height Line Height <span id="LH">Line Height Line Height</span> Line Height Line Height Line Height Line Height 
+			Line Height Line Height Line Height Line Height Line Height Line Height Line Height Line Height Line Height 
+			Line Height Line Height Line Height Line Height Line Height Line Height Line Height Line Height Line Height 
+			</p>
+			<a href="#top">Return to top</a>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+			<p><a name = "2"></a>Two<br/>
+			Styling certain <span class="sec">sections</span> using span.</p>
+			<a href="#top">Return to top</a>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+			<p><a name = "3"></a>Three</p>
+			<p class = "PE">Pseudo Element</p>
+			<p class = "PE"> Pseudo Element</p>
+			<p class = "PE">Pseudo Element</p>
+			<a href="#top">Return to top<a/>
+			<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+			
+			<p><a name = "4"></a>Four</p>
+			<a href="#top">Return to top</a>
+	</body>
+
+</html>
